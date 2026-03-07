@@ -5,9 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noor Academia</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        @media (max-width: 768px) {
+            .hero {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+            }
+            .hero-column {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
+        <a href="index.html" class="logo" style="font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none;">Noor Academia</a>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -25,8 +43,8 @@
                 <img src="assets/images/logo.png" alt="Noor Academia Logo" class="hero-logo">
             </div>
             <div class="hero-column hero-content">
-                <p>Learn, Grow, Achieve with Zimmy</p>
-                <a href="contact.html" class="btn">Get Started</a>
+                <p>Knowledge is the first step to success.</p>
+                <a href="youtube.html" class="btn">Join the Journey</a>
             </div>
         </section>
 

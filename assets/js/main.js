@@ -55,24 +55,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Rotate hero tagline (adds a bit of dynamism)
-  const taglines = [
-    'Learn, Grow, Achieve with Zimmy',
-    'Code smarter, not harder.',
-    'Build the future, one lesson at a time.',
-    'Your journey starts with a single click.',
-  ];
-
-  const heroTagline = document.querySelector('.hero p');
-  if (heroTagline) {
-    const randomIndex = Math.floor(Math.random() * taglines.length);
-    heroTagline.textContent = taglines[randomIndex];
-  }
-
   // Populate course listings on pages that include the course grid
   const courseGrid = document.getElementById('courseGrid');
   if (courseGrid) {
     const isHome = currentPage === 'index.html';
     renderCourses(courseGrid, isHome ? 3 : undefined);
+  }
+
+  // Mobile Navigation Toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
   }
 });
