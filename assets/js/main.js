@@ -1,3 +1,44 @@
+const COURSES = [
+  {
+    id: 'web-development',
+    title: 'Full Stack Web Development',
+    description: 'Build responsive websites and dynamic apps using HTML, CSS, JavaScript, and modern frameworks.',
+    level: 'Beginner → Intermediate',
+    link: 'courses.html#web-development',
+  },
+  {
+    id: 'python-fundamentals',
+    title: 'Python Fundamentals',
+    description: 'Learn Python programming basics, data structures, and how to build small automation scripts.',
+    level: 'Beginner',
+    link: 'courses.html#python-fundamentals',
+  },
+  {
+    id: 'career-paths',
+    title: 'Career Paths in Tech',
+    description: 'Explore the most in-demand tech roles and how to prepare for them with a real-world learning plan.',
+    level: 'All Levels',
+    link: 'courses.html#career-paths',
+  },
+];
+
+function renderCourses(container, limit) {
+  const items = limit ? COURSES.slice(0, limit) : COURSES;
+  container.innerHTML = items
+    .map(
+      (course) =>
+        `<article class="course-card" id="${course.id}">
+          <h3>${course.title}</h3>
+          <p>${course.description}</p>
+          <div class="meta">
+            <span>${course.level}</span>
+            <a href="${course.link}">View</a>
+          </div>
+        </article>`
+    )
+    .join('');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // Update footer year dynamically
   const yearEl = document.getElementById('year');
@@ -26,5 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroTagline) {
     const randomIndex = Math.floor(Math.random() * taglines.length);
     heroTagline.textContent = taglines[randomIndex];
+  }
+
+  // Populate course listings on pages that include the course grid
+  const courseGrid = document.getElementById('courseGrid');
+  if (courseGrid) {
+    const isHome = currentPage === 'index.html';
+    renderCourses(courseGrid, isHome ? 3 : undefined);
   }
 });
