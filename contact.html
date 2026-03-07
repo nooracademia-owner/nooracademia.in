@@ -203,22 +203,22 @@
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
             
-            // Send email via ZeptoMail using EmailJS
-            // 1. In EmailJS (https://dashboard.emailjs.com/), add a "SMTP Server" Service:
-            //    - Host: smtp.zeptomail.in
-            //    - Port: 587 (TLS)
-            //    - Username: emailapikey
-            //    - Password: PHtE6r0LRbzrimQq8BVStqLsRMenNYkp+bxvfwRG4YdAW6BQTU1Wq9opkWLj+RsqVPYWHaOeyY1ps+ibse6Dc2i4MWcaWGqyqK3sx/VYSPOZsbq6x00buF0TdULUVoPqcdZs0STRvt3TNA==
-            // 2. Create an Email Template with "To Email" set to: nooracademia.owner@gmail.com
-            //    and "From Email" using your verified domain (e.g., noreply@nooracademia.in)
-            // 3. Replace YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, and YOUR_PUBLIC_KEY below.
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            const btn = this.querySelector('button[type="submit"]');
+            const originalContent = btn.innerHTML;
+            btn.innerHTML = 'Sending...';
+            btn.disabled = true;
+
+            emailjs.sendForm('service_qrcsv01', 'template_0vjd7fb', this)
                 .then(function() {
                     alert('Message sent successfully!');
                     document.getElementById('contact-form').reset();
+                    btn.innerHTML = originalContent;
+                    btn.disabled = false;
                 }, function(error) {
                     console.log('FAILED...', error);
                     alert('Failed to send message. Please check console for details.');
+                    btn.innerHTML = originalContent;
+                    btn.disabled = false;
                 });
         });
     </script>
