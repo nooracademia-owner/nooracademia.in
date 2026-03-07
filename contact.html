@@ -133,7 +133,7 @@
     <script type="text/javascript">
         (function() {
             // Initialize EmailJS. Replace 'YOUR_PUBLIC_KEY' with your actual public key from https://dashboard.emailjs.com
-            emailjs.init("YOUR_PUBLIC_KEY");
+            emailjs.init("jI41UGkceIBubOIV0");
         })();
     </script>
 </head>
@@ -208,7 +208,7 @@
             btn.innerHTML = 'Sending...';
             btn.disabled = true;
 
-            emailjs.sendForm('service_qrcsv01', 'template_0vjd7fb', this)
+            emailjs.sendForm('service_qrcsv01', 'template_0vjd7fb', this, 'jI41UGkceIBubOIV0')
                 .then(function() {
                     alert('Message sent successfully!');
                     document.getElementById('contact-form').reset();
@@ -216,7 +216,7 @@
                     btn.disabled = false;
                 }, function(error) {
                     console.log('FAILED...', error);
-                    alert('Failed to send message. Please check console for details.');
+                    alert('Failed to send message. Error: ' + JSON.stringify(error));
                     btn.innerHTML = originalContent;
                     btn.disabled = false;
                 });
