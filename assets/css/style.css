@@ -80,16 +80,16 @@ nav ul li a.active {
 }
 
 .hero-logo {
-    max-height: 340px;
-    width: 40vw;
-    max-width: 420px;
+    max-height: 1000px;
+    width: 70vw;
+    max-width: 1000px;
 }
 
 @media (max-width: 720px) {
     .hero-logo {
-        max-height: 260px;
-        width: 40vw;
-        max-width: 320px;
+        max-height: 360px;
+        width: 100vw;
+        max-width: 400px;
     }
 
     .hero {
@@ -98,12 +98,12 @@ nav ul li a.active {
     }
 
     .hero-column {
-        flex: 1 1 50%;
+        flex: 1 1 100%;
         min-width: 0;
     }
 
     .hero-content {
-        text-align: left;
+        text-align: center;
     }
 }
 
