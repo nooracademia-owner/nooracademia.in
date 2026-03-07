@@ -21,6 +21,8 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
@@ -45,4 +47,29 @@ nav ul li a {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+}
+
+.features {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features ul li {
+    margin: 10px 0;
+}
+
+.content {
+    padding: 50px 20px;
+}
+
+footer {
+    background-color: #1E3A8A;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
