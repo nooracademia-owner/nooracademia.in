@@ -5,10 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses - Noor Academia</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        header {
+            justify-content: center;
+            position: relative;
+            background-color: #0a193d;
+        }
+        header nav {
+            position: absolute;
+            right: 20px;
+        }
+        header .logo {
+            max-height: 180px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+        @media (max-width: 768px) {
+            header {
+                justify-content: center;
+            }
+            header nav {
+                right: auto;
+            }
+            header .menu-toggle {
+                position: absolute;
+                right: 20px;
+            }
+            header .logo {
+                max-height: 100px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo" style="font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none;">Noor Academia</a>
+        <a href="index.html">
+            <img src="assets/images/logo-others.png" alt="Noor Academia" class="logo">
+        </a>
         <button class="menu-toggle" aria-label="Toggle navigation">
             <span></span>
             <span></span>
