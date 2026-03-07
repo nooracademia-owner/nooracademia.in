@@ -30,6 +30,10 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a.active {
+    text-decoration: underline;
+}
+
 .hero {
     text-align: center;
     padding: 100px 20px;
