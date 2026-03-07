@@ -5,10 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Noor Academia</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Outlook Style Overrides */
+        body {
+            background-color: #f0f2f5;
+        }
+        .content {
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .outlook-frame {
+            width: 100%;
+            max-width: 800px;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 1px solid #e1dfdd;
+        }
+        .outlook-header {
+            background-color: #0078D4;
+            color: white;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .outlook-toolbar {
+            background-color: #f3f2f1;
+            padding: 8px 16px;
+            border-bottom: 1px solid #e1dfdd;
+            display: flex;
+            gap: 8px;
+        }
+        .outlook-btn {
+            border: none;
+            background: transparent;
+            padding: 6px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 2px;
+            color: #333;
+        }
+        .outlook-btn:hover {
+            background-color: #edebe9;
+        }
+        .outlook-btn.primary {
+            background-color: #0078D4;
+            color: white;
+        }
+        .outlook-btn.primary:hover {
+            background-color: #106ebe;
+        }
+        .form-row {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e1dfdd;
+            padding: 8px 16px;
+        }
+        .form-row label {
+            width: 60px;
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .form-row input, .form-row .static-text {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            font-family: inherit;
+            padding: 4px;
+        }
+        .form-row .static-text {
+            color: #333;
+            cursor: default;
+        }
+        .message-area {
+            padding: 16px;
+        }
+        .message-area textarea {
+            width: 100%;
+            border: none;
+            resize: vertical;
+            min-height: 300px;
+            outline: none;
+            font-family: inherit;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        header .logo {
+            max-height: 90px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+        @media (max-width: 720px) {
+            header .logo {
+                max-height: 60px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo" style="font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none;">Noor Academia</a>
+        <a href="index.html">
+            <img src="assets/images/logo.png" alt="Noor Academia" class="logo">
+        </a>
         <button class="menu-toggle" aria-label="Toggle navigation">
             <span></span>
             <span></span>
@@ -27,9 +134,37 @@
 
     <main>
         <section class="content">
-            <h1>Contact Us</h1>
-            <p>Email: <a href="mailto:nooracademia.owner@gmail.com">nooracademia.owner@gmail.com</a></p>
-            <p>We are here to help you learn, grow, and achieve your goals.</p>
+            <div class="outlook-frame">
+                <div class="outlook-header">
+                    <span>New Message</span>
+                </div>
+                <form action="mailto:nooracademia.owner@gmail.com" method="post" enctype="text/plain">
+                    <div class="outlook-toolbar">
+                        <button type="submit" class="outlook-btn primary">
+                            <span>&#9993;</span> Send
+                        </button>
+                        <button type="button" class="outlook-btn">
+                            <span>&#128206;</span> Attach
+                        </button>
+                        <button type="reset" class="outlook-btn">Discard</button>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">From</label>
+                        <input type="email" id="email" name="email" required placeholder="Your email address">
+                    </div>
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-row">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Add a subject">
+                    </div>
+                    <div class="message-area">
+                        <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
