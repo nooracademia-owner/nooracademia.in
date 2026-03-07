@@ -129,6 +129,13 @@
             }
         }
     </style>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Initialize EmailJS. Replace 'YOUR_PUBLIC_KEY' with your actual public key from https://dashboard.emailjs.com
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+    </script>
 </head>
 <body>
     <header>
@@ -157,7 +164,7 @@
                 <div class="outlook-header">
                     <span>New Message</span>
                 </div>
-                <form action="mailto:nooracademia.owner@gmail.com" method="post" enctype="text/plain">
+                <form id="contact-form">
                     <div class="outlook-toolbar">
                         <button type="submit" class="outlook-btn primary">
                             <span>&#9993;</span> Send
@@ -192,5 +199,22 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Use EmailJS to send email via Gmail (SMTP)
+            // You need to create an account at emailjs.com, connect Gmail service, and create a template.
+            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' below.
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    alert('Message sent successfully!');
+                    document.getElementById('contact-form').reset();
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Failed to send message. Please check console for details.');
+                });
+        });
+    </script>
 </body>
 </html>
