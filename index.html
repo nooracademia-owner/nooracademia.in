@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor Academia</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        @media (max-width: 768px) {
+            .hero {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+            }
+            .hero-column {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo" style="font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none;">Noor Academia</a>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="youtube.html">YouTube</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-column">
+                <img src="assets/images/logo.png" alt="Noor Academia Logo" class="hero-logo">
+            </div>
+            <div class="hero-column hero-content">
+                <p>Knowledge is the first step to success.</p>
+                <a href="youtube.html" class="btn">Join the Journey</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Our Focus Areas</h2>
+            <ul>
+                <li>Programming & Development</li>
+                <li>Technical Tutorials</li>
+                <li>Career Guidance</li>
+            </ul>
+        </section>
+
+        <section class="courses" aria-label="Featured courses">
+            <h2>Featured Courses</h2>
+            <div class="courses-grid" id="courseGrid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year">2026</span> Noor Academia. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

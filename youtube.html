@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube - Noor Academia</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo" style="font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none;">Noor Academia</a>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="youtube.html">YouTube</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Watch Tutorials on YouTube</h1>
+            <p>Explore playlists, follow along with coding lessons, and learn at your own pace.</p>
+            <p><a href="https://www.youtube.com/@NoorAcademia" target="_blank" rel="noopener" class="btn">Visit Channel</a></p>
+        </section>
+
+        <section class="courses" aria-label="YouTube playlist">
+            <h2>Featured Playlist</h2>
+            <div class="video-container">
+                <iframe
+                    width="100%"
+                    height="480"
+                    src="https://www.youtube.com/embed/videoseries?list=PLXXXXXXXXXXXXXXX"
+                    title="Noor Academia YouTube Playlist"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="caption">Replace <code>PLXXXXXXXXXXXXXXX</code> in the iframe URL with your actual playlist ID (the part after <code>?list=</code>).</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year">2026</span> Noor Academia. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
