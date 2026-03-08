@@ -80,6 +80,17 @@ nav ul li a.active {
     max-width: 420px;
 }
 
+.hero-content p {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #FF9933, #FFFFFF, #138808);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
 .hero-logo {
     max-height: 1000px;
     width: 70vw;
@@ -114,18 +125,21 @@ nav ul li a.active {
 }
 
 .hero .btn {
-    background-color: #1E3A8A;
-    color: white;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000080;
+    font-weight: bold;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 160ms ease, transform 160ms ease;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+    transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
 .hero .btn:hover,
 .hero .btn:focus {
-    background-color: #16357f;
+    background: linear-gradient(135deg, #FFC107, #FF8C00);
     transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
 }
 
 .features {
@@ -266,6 +280,10 @@ footer {
 
     .hero h1 {
         font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
     }
 
     .features,
