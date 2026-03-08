@@ -272,6 +272,7 @@ footer {
 
     .hero {
         padding: 70px 16px;
+        flex-direction: column;
     }
 
     .hero h1 {
