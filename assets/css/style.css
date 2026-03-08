@@ -128,15 +128,25 @@ nav ul li a.active {
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
     transition: transform 160ms ease, box-shadow 160ms ease;
+    animation: pulse-glow 2s infinite alternate;
 }
 
 .hero .btn:hover,
 .hero .btn:focus {
     background: linear-gradient(135deg, #FFC107, #FF8C00);
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+    animation: none; /* Pause the pulse on hover for a brighter static glow */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 215, 0, 0.4);
+}
+
+@keyframes pulse-glow {
+    from {
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 12px rgba(255, 215, 0, 0.3);
+    }
+    to {
+        box-shadow: 0 0 16px rgba(255, 255, 255, 0.6), 0 0 24px rgba(255, 215, 0, 0.4);
+    }
 }
 
 .features {
