@@ -14,9 +14,29 @@
             color: white;
         }
         .hero .btn {
-            font-size: 2rem;
-            padding: 1rem 2.5rem;
+            font-size: 1.5rem;
+            padding: 0.8rem 2rem;
             font-weight: bold;
+            position: relative;
+            isolation: isolate; /* Creates a new stacking context */
+        }
+        .hero .btn::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #fff, 0 0 12px #fff, 0 0 16px gold;
+            animation: sparkle-border 4s linear infinite;
+            z-index: -1; /* Places the glow behind the button */
+        }
+        @keyframes sparkle-border {
+            0% { top: -5px; left: -5px; }
+            25% { top: -5px; left: calc(100% - 5px); }
+            50% { top: calc(100% - 5px); left: calc(100% - 5px); }
+            75% { top: calc(100% - 5px); left: -5px; }
+            100% { top: -5px; left: -5px; }
         }
         @media (max-width: 768px) {
             .hero {
