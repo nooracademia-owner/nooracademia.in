@@ -40,9 +40,6 @@ function renderCourses(container, limit) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Learning is the Spark.');
-  console.log('Growth is the Flame.');
-  console.log('Success is the Strategy.');
   // Update footer year dynamically
   const yearEl = document.getElementById('year');
   if (yearEl) {
