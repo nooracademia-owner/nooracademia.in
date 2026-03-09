@@ -1,66 +1,280 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noor Academia</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'self' https://api.emailjs.com; frame-src 'self' https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self';">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Noor Academia IN | Learn. Grow. Achieve.</title>
+
+<meta name="description" content="Free lectures for Indian students in Programming, Computer Science and Engineering. Learn in Hindi, English and Bengali.">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
-<body class="home">
-    <header>
-        <a href="index.html" class="logo" style="font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none;">Noor Academia</a>
-        <button class="menu-toggle" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="youtube.html">YouTube</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-column">
-                <img src="assets/images/logo.png" alt="Noor Academia Logo" class="hero-logo">
-            </div>
-            <div class="hero-column hero-content">
-                <a href="youtube.html" class="btn">Join the Journey</a>
-            </div>
-        </section>
+<body>
 
-        <section class="features">
-            <h2>Our Focus Areas</h2>
-            <ul>
-                <li>Programming & Development</li>
-                <li>Technical Tutorials</li>
-                <li>Career Guidance</li>
-            </ul>
-        </section>
+<!-- HEADER -->
 
-        <section class="courses" aria-label="Featured courses">
-            <h2>Featured Courses</h2>
-            <div class="courses-grid" id="courseGrid"></div>
-        </section>
-    </main>
+<header>
 
-    <footer>
-        <p>© <span id="year">2026</span> Noor Academia. All rights reserved.</p>
-    </footer>
+<div class="container">
 
-    <script src="assets/js/main.js"></script>
+<h1 class="logo">
+    <img src="assets/logo/logo.png" alt="Noor Academia Logo" class="header-logo">
+    <span class="logo-text-wrapper">
+        <span class="logo-main">NOOR</span>
+        <span class="logo-sub">Academia<sup>IN</sup></span>
+        <span class="header-tagline">Learn . Grow . Shine</span>
+    </span>
+</h1>
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#features">Why Us</a></li>
+<li><a href="#courses">Subjects</a></li>
+<li><a href="#videos">Lectures</a></li>
+<li><a href="#about">Mission</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>Your Path to Academic Excellence</h2>
+
+<p>
+High-quality free lectures for students across India,
+with clear explanations in <strong>Bengali, Hindi & English</strong>.
+Master Programming, CS, and Engineering subjects.
+</p>
+
+<div class="hero-buttons">
+
+<button class="primary-btn" onclick="goToYouTube()">
+    <img src="assets/logo/icon/youtube-white.svg" alt="YouTube Logo" class="button-logo">
+    Start Learning
+</button>
+
+<button class="secondary-btn" onclick="subscribeChannel()">🔔 Subscribe</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="stats-grid">
+
+<div class="stat">
+<h3 id="subscriber-count">100+</h3>
+<p>Subscribers on YouTube</p>
+</div>
+
+<div class="stat">
+<h3>50+</h3>
+<p>Lectures Planned</p>
+</div>
+
+<div class="stat">
+<h3>3</h3>
+<p>Languages</p>
+</div>
+
+<div class="stat">
+<h3>Free</h3>
+<p>Education Forever</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section id="features">
+
+<h2>Why Noor Academia<sup>IN</sup></h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+<h3>🎓 Curriculum Aligned</h3>
+<p>Lectures structured according to academic syllabus.</p>
+</div>
+
+<div class="feature">
+<h3>💡 Simple Explanations</h3>
+<p>Difficult concepts explained in simple language.</p>
+</div>
+
+<div class="feature">
+<h3>🇮🇳 For <span class="tricolor-indian">Indian</span> Students</h3>
+<p>Content in Bengali, Hindi & English, aligned with Indian school and university syllabuses.</p>
+</div>
+
+<div class="feature">
+<h3>🚀 Career Focused</h3>
+<p>Strong fundamentals for placements and real jobs.</p>
+</div>
+
+<div class="feature">
+<h3>✍️ You Ask, We Create</h3>
+<p>Struggling with a topic? Request it! We create lectures on subjects you need, if they are within our expertise.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- COURSES -->
+
+<section id="courses">
+
+<h2>Our Subjects</h2>
+
+<div class="course-grid">
+
+<div class="course">
+
+<h3>📘 School (Class 9-12)</h3>
+
+<ul>
+<li><img src="assets/logo/icon/python.svg" alt="Python logo" class="subject-logo">Python</li>
+<li><img src="assets/logo/icon/java.svg" alt="Java logo" class="subject-logo">Java</li>
+<li><img src="assets/logo/icon/computer-applications.svg" alt="Computer icon" class="subject-logo">Computer Applications</li>
+</ul>
+
+</div>
+
+<div class="course">
+
+<h3>💻 Programming</h3>
+
+<ul>
+<li><img src="assets/logo/icon/c.svg" alt="C language icon" class="subject-logo">C Programming</li>
+<li><img src="assets/logo/icon/cpp.svg" alt="C++ language icon" class="subject-logo">C++</li>
+<li><img src="assets/logo/icon/java.svg" alt="Java logo" class="subject-logo">Java</li>
+<li><img src="assets/logo/icon/python.svg" alt="Python logo" class="subject-logo">Python</li>
+<li><img src="assets/logo/icon/data-structures.svg" alt="Data Structures icon" class="subject-logo">Data Structures</li>
+<li><img src="assets/logo/icon/algorithms.svg" alt="Algorithms icon" class="subject-logo">Algorithms</li>
+</ul>
+
+</div>
+
+<div class="course">
+
+<h3>🖥 Core Computer Science</h3>
+
+<ul>
+<li><img src="assets/logo/icon/os.svg" alt="Operating Systems icon" class="subject-logo">Operating Systems</li>
+<li><img src="assets/logo/icon/cn.svg" alt="Computer Networks icon" class="subject-logo">Computer Networks</li>
+<li><img src="assets/logo/icon/dbms.svg" alt="Database icon" class="subject-logo">Database Systems</li>
+<li><img src="assets/logo/icon/coa.svg" alt="Computer Architecture icon" class="subject-logo">Computer Architecture</li>
+<li><img src="assets/logo/icon/toc.svg" alt="Theory of Computation icon" class="subject-logo">Theory of Computation</li>
+<li><img src="assets/logo/icon/compiler.svg" alt="Compiler Design icon" class="subject-logo">Compiler Design</li>
+</ul>
+
+</div>
+
+<div class="course">
+
+<h3>🤔 Subject Missing?</h3>
+
+<p class="request-text">Don't see what you're looking for? Contact us with your subject request, and we'll create the content if we can.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- YOUTUBE VIDEOS -->
+
+<section id="videos">
+
+<h2>Latest Lectures</h2>
+
+<div class="video-grid">
+
+<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" title="Latest Lecture 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" title="Latest Lecture 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" title="Latest Lecture 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Start Learning Today</h2>
+
+<p>
+Join Noor Academia<sup>IN</sup> and access free lectures designed to simplify complex subjects.
+</p>
+
+<button onclick="goToYouTube()">Watch Lectures</button>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2>Our Mission</h2>
+
+<p>
+Our mission is to make high-quality education accessible to every student in India.
+We simplify complex subjects and provide lectures in Hindi, English and Bengali
+so that every learner can understand and grow.
+</p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>For topic requests or inquiries, email us at: <strong>contact@nooracademia.in</strong></p>
+
+<p>Follow us on YouTube for new lectures every week.</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2024 Noor Academia<sup>IN</sup> | Learn. Grow. Achieve.</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
 </body>
+
 </html>
