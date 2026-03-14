@@ -305,6 +305,29 @@ sup {
     transform: translateY(0);
 }
 
+/* --- CTA Contact Section --- */
+.cta-contact {
+    background: #f1f5f9; /* A light grey background to stand out a bit */
+}
+
+.contact-page-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    background: #0f172a;
+    color: white;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-page-btn:hover {
+    background-color: #1e293b;
+}
+
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
     .container {
@@ -393,4 +416,89 @@ sup {
     .stats-grid, .feature-grid, .course-grid, .video-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* --- CONTACT PAGE STYLES --- */
+.contact-section {
+    background: #f1f5f9; /* A light grey background like cta-contact */
+    padding: 70px 20px;
+}
+
+.contact-section h2 {
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    color: #475569;
+}
+
+.contact-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px 30px;
+    border: none;
+    background: #2563eb; /* Main CTA color */
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8; /* Darker shade on hover */
+}
+
+.btn-submit:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
 }
