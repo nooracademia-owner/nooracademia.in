@@ -43,6 +43,16 @@ text-decoration:none;
 font-weight:500;
 }
 
+.nav-compiler-link {
+    color: #4CAF50 !important;
+    font-weight: bold;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .menu-btn {
     display: none; /* Hidden on desktop */
 }
@@ -229,6 +239,17 @@ padding:20px;
 margin-top:40px;
 }
 
+.footer-credit {
+    font-size: 0.8em;
+    color: #cbd5e1;
+    margin-top: 10px;
+}
+
+.footer-credit a {
+    color: #cbd5e1;
+    text-decoration: underline;
+}
+
 .subject-logo {
     height: 1.2em;
     width: auto;
@@ -326,6 +347,30 @@ sup {
 
 .contact-page-btn:hover {
     background-color: #1e293b;
+}
+
+/* --- BACK TO TOP BUTTON --- */
+#back-to-top-btn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    border: none;
+    outline: none;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+#back-to-top-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
 }
 
 /* --- RESPONSIVE DESIGN --- */
