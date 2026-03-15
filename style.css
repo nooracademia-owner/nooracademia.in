@@ -1,0 +1,523 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f8fafc;
+color:#1e293b;
+line-height:1.6;
+}
+
+header{
+background:#0f172a;
+color:white;
+padding:15px 0;
+position:sticky;
+top:0;
+z-index: 101;
+}
+
+.container{
+width:90%;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+.menu-btn {
+    display: none; /* Hidden on desktop */
+}
+
+.hero{
+background:linear-gradient(to right,#2563eb,#1d4ed8);
+color:white;
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.hero-buttons button{
+margin:10px;
+padding:12px 25px;
+border:none;
+border-radius:6px;
+font-weight:600;
+cursor:pointer;
+transition: background-color 0.3s ease;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+position: relative;
+overflow: hidden;
+}
+
+.secondary-btn{
+background:#0f172a;
+color:white;
+}
+
+.secondary-btn:hover {
+background-color: #1e293b;
+}
+
+.button-logo {
+    height: 1.2em;
+    width: auto;
+}
+
+/* --- 3D Flip Button Styles --- */
+.flip-btn {
+    /* Base styles from .hero-buttons button are inherited */
+    background-color: transparent; /* The button itself is a transparent container */
+    padding: 0; /* Padding is now on the faces */
+    perspective: 1000px; /* Enables the 3D space for the flip effect */
+    border: none;
+    /* Overrides for 3D effect */
+    overflow: visible; /* Prevents clipping the 3D rotation */
+    display: inline-block; /* To contain the relatively positioned inner element */
+}
+
+.flip-inner {
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-btn:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    -webkit-backface-visibility: hidden; /* Prevents flickering in Safari */
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px; /* Match the original button style */
+    color: white;
+    padding: 12px 25px; /* Use original padding to define size */
+}
+
+.flip-front {
+    background-color: #CC0000;
+    gap: 8px; /* Space for the icon */
+}
+
+.flip-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #A30000; /* Use a slightly different color for the back */
+    transform: rotateY(180deg);
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+section{
+padding:70px 20px;
+text-align:center;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.stat{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.feature{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.course-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.course{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.course ul {
+list-style: none;
+padding-left: 0;
+}
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.video-grid iframe{
+width:100%;
+height:200px;
+border:none;
+}
+
+.cta{
+background:#2563eb;
+color:white;
+padding:80px 20px;
+}
+
+.cta button{
+margin-top:20px;
+padding:12px 30px;
+border:none;
+background:white;
+color:#2563eb;
+font-weight:600;
+border-radius:6px;
+cursor:pointer;
+}
+
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+.subject-logo {
+    height: 1.2em;
+    width: auto;
+    margin-right: 0.5em;
+}
+.course ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.course ul li:last-child {
+    margin-bottom: 0;
+}
+.course .request-text {
+    text-align: left;
+    margin-top: 10px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header-logo {
+    height: 80px;
+    width: auto;
+}
+.logo-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+.logo-main {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.logo-sub {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+.header-tagline {
+    font-size: 0.45em;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    color: #cbd5e1;
+    text-transform: uppercase;
+}
+.tricolor-indian {
+    font-weight: 600;
+    background: linear-gradient(90deg, #FF9933 33.3%, #FFFFFF 33.3%, #FFFFFF 66.6%, #138808 66.6%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #475569;
+}
+sup {
+    font-size: 0.5em;
+    font-weight: 700;
+    position: relative;
+    top: -0.6em;
+    margin-left: 2px;
+}
+
+/* --- SCROLL ANIMATION STYLES --- */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- CTA Contact Section --- */
+.cta-contact {
+    background: #f1f5f9; /* A light grey background to stand out a bit */
+}
+
+.contact-page-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    background: #0f172a;
+    color: white;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-page-btn:hover {
+    background-color: #1e293b;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    /* --- Header & Navigation --- */
+    .menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 100;
+    }
+
+    .menu-icon-line {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background: #1e293b;
+        padding-top: 80px;
+        transition: right 0.3s ease-in-out;
+        z-index: 99;
+    }
+
+    nav.nav-active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    /* --- Logo --- */
+    .header-logo {
+        height: 50px;
+    }
+    .logo-main {
+        font-size: 1.2em;
+    }
+    .logo-sub {
+        font-size: 0.9em;
+    }
+    .header-tagline {
+        display: none; /* Hide tagline on mobile for space */
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+        padding: 80px 20px;
+    }
+    .hero h2 {
+        font-size: 32px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-buttons .secondary-btn {
+        /* This promotes the button to its own hardware layer, which can fix stacking issues with 3D transformed siblings */
+        transform: translateZ(0);
+    }
+
+    /* --- Grids --- */
+    .stats-grid, .feature-grid, .course-grid, .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- CONTACT PAGE STYLES --- */
+.contact-section {
+    background: #f1f5f9; /* A light grey background like cta-contact */
+    padding: 70px 20px;
+}
+
+.contact-section h2 {
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    color: #475569;
+}
+
+.contact-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px 30px;
+    border: none;
+    background: #2563eb; /* Main CTA color */
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8; /* Darker shade on hover */
+}
+
+.btn-submit:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* --- FORM STATUS MESSAGES --- */
+#form-status {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.status-success {
+    background-color: #dcfce7; /* Light Green */
+    color: #166534; /* Dark Green */
+}
+
+.status-error {
+    background-color: #fee2e2; /* Light Red */
+    color: #991b1b; /* Dark Red */
+}

@@ -14,6 +14,16 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNZ4BWEWSL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CNZ4BWEWSL');
+    </script>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
@@ -78,6 +88,7 @@
                         </div>
                         <button type="submit" class="btn-submit">Send Message</button>
                     </form>
+                    <div id="form-status" style="display: none;"></div>
                 </div>
             </div>
         </section>
@@ -91,21 +102,29 @@
     <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
-            
+
             const btn = this.querySelector('button[type="submit"]');
             const originalContent = btn.innerHTML;
+            const formStatus = document.getElementById('form-status');
+
             btn.innerHTML = 'Sending...';
             btn.disabled = true;
+            formStatus.style.display = 'none';
 
             emailjs.sendForm('service_qrcsv01', 'template_0vjd7fb', this)
                 .then(function() {
-                    alert('Message sent successfully!');
+                    formStatus.textContent = 'Message sent successfully! We will get back to you shortly.';
+                    formStatus.className = 'status-success';
+                    formStatus.style.display = 'block';
                     document.getElementById('contact-form').reset();
-                    btn.innerHTML = originalContent;
-                    btn.disabled = false;
                 }, function(error) {
                     console.log('FAILED...', error);
-                    alert('Failed to send message. Error: ' + JSON.stringify(error));
+                    formStatus.textContent = 'Failed to send message. Please try again later or contact us directly.';
+                    formStatus.className = 'status-error';
+                    formStatus.style.display = 'block';
+                })
+                .finally(function() {
+                    // This block runs whether the email succeeds or fails
                     btn.innerHTML = originalContent;
                     btn.disabled = false;
                 });
