@@ -11,39 +11,6 @@ function subscribeChannel() {
 // Wait for the DOM to be fully loaded before running scripts
 document.addEventListener('DOMContentLoaded', () => {
 
-    const loadHTML = (url, elementId) => {
-        const placeholder = document.getElementById(elementId);
-        if (!placeholder) {
-            // Don't throw an error, just return a resolved promise if placeholder doesn't exist
-            return Promise.resolve();
-        }
-
-        return fetch(url)
-            .then(response => {
-                if (!response.ok) throw new Error(`Could not load ${url}: ${response.status} ${response.statusText}`);
-                return response.text();
-            })
-            .then(data => {
-                // Replace the placeholder with the fetched HTML
-                placeholder.outerHTML = data;
-            });
-    };
-
-    const loadTemplates = async () => {
-        try {
-            // Wait for all templates to be loaded
-            await Promise.all([
-                loadHTML('assets/templates/header.html', 'header-placeholder'),
-                loadHTML('assets/templates/footer.html', 'footer-placeholder')
-            ]);
-        } catch (error) {
-            console.error("Error loading templates:", error);
-        } finally {
-            // Now that templates are loaded (or failed), run the rest of the scripts
-            initializePageScripts();
-        }
-    };
-
     const initializePageScripts = () => {
         // All page-specific scripts that depend on the DOM being ready (and templates loaded) go here.
 
@@ -172,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     };
-
-    // Start loading templates
-    loadTemplates();
+    
+    initializePageScripts();
 });
