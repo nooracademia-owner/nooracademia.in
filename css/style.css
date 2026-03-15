@@ -461,6 +461,15 @@ sup {
     .stats-grid, .feature-grid, .course-grid, .video-grid {
         grid-template-columns: 1fr;
     }
+
+    /* --- Contact Page --- */
+    .contact-section {
+        padding: 40px 15px;
+    }
+
+    .contact-form-container {
+        padding: 25px;
+    }
 }
 
 /* --- CONTACT PAGE STYLES --- */

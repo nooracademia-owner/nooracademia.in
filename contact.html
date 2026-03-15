@@ -50,7 +50,36 @@
     </script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <h1 class="logo">
+                    <img src="assets/logo/logo.png" alt="Noor Academia Logo" class="header-logo">
+                    <span class="logo-text-wrapper">
+                        <span class="logo-main">NOOR</span>
+                        <span class="logo-sub">Academia<sup>IN</sup></span>
+                        <span class="header-tagline">Learn . Grow . Shine</span>
+                    </span>
+                </h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#features">Why Us</a></li>
+                    <li><a href="index.html#courses">Subjects</a></li>
+                    <li><a href="index.html#videos">Lectures</a></li>
+                    <li><a href="index.html#about">Mission</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://compiler.nooracademia.in" target="_blank" class="nav-compiler-link">Compiler</a></li>
+                </ul>
+            </nav>
+            <button id="menu-btn" class="menu-btn" aria-label="Open Menu" aria-expanded="false">
+                <span class="menu-icon-line"></span>
+                <span class="menu-icon-line"></span>
+                <span class="menu-icon-line"></span>
+            </button>
+        </div>
+    </header>
 
     <main>
         <section class="contact-section">
@@ -83,7 +112,12 @@
         </section>
     </main>
 
-    <div id="footer-placeholder"></div>
+    <button id="back-to-top-btn" title="Go to top">&#8679;</button>
+
+    <footer>
+        <p>© 2024 Noor Academia<sup>IN</sup> | Learn. Grow. Achieve.</p>
+        <p style="font-size: 0.8em; color: #cbd5e1; margin-top: 10px;">Maintained by <a href="https://www.noorbyte.in" target="_blank" style="color: #cbd5e1; text-decoration: underline;">NoorByte.in</a></p>
+    </footer>
     <script src="js/script.js"></script>
     <script src="js/contact-form.js"></script>
 </body>
